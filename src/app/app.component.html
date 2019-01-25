@@ -1,0 +1,16 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+  <div *ngFor="let item of items; let i = index">
+    <input
+      type="checkbox"
+      [(ngModel)]="item.checked"
+      name="item"
+      [checked]="checked"
+      value="item.name"
+      (click)="addItems(item.name)"
+    />{{item.name}}
+    <button [(ngModel)]="item.checked" (click)="deleteItems(item.name)">
+      DeleteItem
+    </button>
+  </div>
+</div>
